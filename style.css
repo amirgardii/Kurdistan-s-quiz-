@@ -1,0 +1,514 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #09001d;
+    overflow: hidden;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 45px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.categors a {
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.3s;
+}
+
+.categors a:hover,
+.categors a.active {
+    color: #6c4094;
+}
+
+.main {
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto;
+    transition: 0.3 ease;
+}
+.main.active {
+    filter: blur(15px);
+    pointer-events: none;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    width: 200%;
+}
+
+
+.home {
+    position: relative;
+    left: -50%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homecontent {
+max-width: 600px;
+display: flex;
+align-items: center;
+flex-direction: column;
+
+}
+.homecontent h2 {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 200; 
+    position: absolute;
+     top: 40%;
+    right: 21%;
+   transform: translate(-50%);
+}
+
+.homecontent p{
+font-size: 20px;     
+text-align: left;
+margin-bottom: 30px;
+position: absolute;
+margin: center;
+margin-top: 0.3%;
+
+}
+
+
+.homecontent .startbtnw{
+    width: 150px;
+    height: 55px;
+    background: #c40094;
+border: 2px solid #ffffff;
+border-radius:10px;
+font-size: 24px;
+color: #fff;
+font-weight: 500;
+cursor: pointer;
+transition: 0.5s;
+position: absolute;
+top: 60%;
+right: 39%;
+transform: translate(-50%);
+}
+
+.homecontent .startbtnw:hover{
+background: black;
+box-shadow: none;
+}
+
+
+.quiz-sec {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    background: #09001d;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s ease-in-out;
+    transition-delay: 0.25s;
+   
+}
+.quiz-sec .result-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50% ) scale(0.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid #c40094;
+    border-radius: 6px;
+    padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     opacity: 0;
+     pointer-events: none;
+     transition: 0,3s ease;
+    }
+    .quiz-sec .result-box.active {
+        opacity: 1;
+        pointer-events: auto;  
+        transform: translate(-50% ,-50% ) scale(1);
+    }
+.quiz-sec.active {
+    left: 0;
+}
+.quiz-sec .quiz-box{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid #c40094;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9);
+    transition: 0.3s ease;
+    transition-delay: 0s;
+
+
+}
+.quiz-sec .quiz-box.active {
+    opacity: 2;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+
+
+}
+.quiz-sec h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg , transparent ,#c40094 , transparent);
+    border-radius: 6px;
+}
+.quiz-box .quiz-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 0;
+border-bottom: 2px solid #c40094;
+margin-bottom: 20px;
+}
+.quiz-header span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.quiz-header .header-score {
+    background: #c40094;
+    border-radius: 3px;
+    padding: 7px;
+}
+.quiz-box .quiz-text{
+font-size: 24px;
+font-weight: 600;
+}
+.option-list .option{
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid rgba(255 ,255 , 255 , 0.3);
+    border-radius: 4px;
+    font-size: 17px;
+    margin: 15px 0;
+    cursor: pointer;
+transition: 0.3s;
+}
+.option-list .option:hover {
+background: rgba(255, 255,255,0.1);
+border-color:rgba(255, 255,255,0.1) ;
+
+}
+.option-list .option.correct {
+    background: #09001d;
+    color: green;
+    border-color: green;
+}
+.option-list .option.wrong {
+    background: #09001d;
+    color: red;
+    border-color: red;
+}
+.option-list .option.disable {
+    pointer-events: none;
+}
+.quiz-box .quiz-foter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #c40094;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+.quiz-foter .quiz-counter{
+font-size: 17px;
+font-weight: 600;
+}
+.quiz-foter .next-btn{
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255,255,0.1);
+    border: 2px solid rgba(255, 255,255,0.1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(255 ,255 , 255 , 0.3);
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.quiz-foter .next-btn.active{
+    pointer-events: auto;
+    background: #c40094;
+    border-color: #c40094;
+    color: #fff;
+
+}
+.quiz-foter .next-btn.active:hover{
+    background: #eb3150;
+    border-color: #531515;
+    }
+
+    // result anasrenin !!
+
+.result-box  h2 {
+    font-size: 52px;
+}
+.result-box .persentage {
+width: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 20px 0 40px ;
+}
+.persentage .circuler-progres {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(#c40094 3.6deg , rgba(255 ,255,255,0.1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.persentage .circuler-progres::before{
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background-color: #09001d;
+    border-radius: 50%;
+}
+.circuler-progres .progres-value {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+
+}
+.persentage .score-text {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+
+}
+.result-box .buttons {
+    display: flex;
+}
+.buttons button {
+    width: 130px;
+    height: 47px;
+    background: #c40094;
+    border: 2px solid #c40094;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 20px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.buttons button:nth-child(1):hover{
+    background: #972b42;
+    border-color: #f81111;
+}
+.buttons button:nth-child(2){
+    background: transparent;
+    color: #c40094;
+}.buttons button:nth-child(2):hover{
+    background: #c40094;
+    color: #fff;
+}
+/* lera quiz Guide design akain*/
+.guide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 10px 25px ;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+.guide.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.guide h2 {
+    font-size:40px ;
+    color: #c40094;
+}
+.guide .info {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin: 4px 0;
+}
+.guide .btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top:1px solid #999 ;
+    margin-top: 10px;
+    padding: 15px 0 7px;
+}
+.guide .btn-group .info-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 40px;
+    background: #c40094;
+    border: 2px solid #c40094;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.guide .btn-group .info-btn:nth-child(1) {
+    background: transparent;
+     color: #c40094;
+}
+.guide .btn-group .info-btn:nth-child(1):hover{
+    background: #c40094;
+     color: #fff;
+}
+.guide .btn-group .info-btn:nth-child(2):hover{
+    background: #c73e3e;
+     border-color: #fff;
+}
+
+/*designi aboutme lerara de dast pe kam*/
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.mainn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; 
+    text-align: left;
+}
+
+.mainn img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #6c4094;
+    padding: 5px;
+    border: 2px solid #6c4094;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-text h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-text h5 b {
+    color: #94407b;
+    
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ccc;
+}
+.about-text p b {
+
+ color: #b40817;
+
+}
+
+/*lerara cssY contacta!!!*/
+.general-social-icon {
+    display: flex;
+    justify-content: center;  
+  }
+  
+  
+  .social-icon {
+    margin: 23% 25px; 
+    
+  }
+  
+  .social-icon a {
+    display: grid;
+    width: 85px; 
+    height: 85px;
+    
+  }
+  
+  .social-icon img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out; 
+  }
+  .social-icon a:hover img {
+    transform: scale(1.2);  
+  }
+  
