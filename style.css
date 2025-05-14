@@ -285,7 +285,7 @@ font-weight: 600;
     border-color: #531515;
     }
 
-    // result anasrenin !!
+    /* // result anasrenin !! */
 
 .result-box  h2 {
     font-size: 52px;
@@ -511,4 +511,30 @@ margin: 20px 0 40px ;
   .social-icon a:hover img {
     transform: scale(1.2);  
   }
-  
+  @media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .categors a {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .mainn {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text h1 {
+        font-size: 28px;
+    }
+
+    .about-text h5 {
+        font-size: 18px;
+    }
+}
