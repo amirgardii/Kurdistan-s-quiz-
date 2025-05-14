@@ -1,0 +1,36 @@
+What does HTML stand for?
+
+A. Hyperlinks and Text Markup Language
+B. Home Tool Markup Language
+C. Hyper Text Markup Language  ✅ 
+D. High-Level Text Machine Language
+
+what does CSS stand for?
+
+A. Cascading Style Sheet ✅
+B. Cute Style Sheet
+C. Computer Style Sheet
+D. Codehal Style Sheet
+
+Which HTML tag is used to create a hyperlink?
+
+A. <img>
+B. <a> ✅
+C. <link>
+D. <href>
+
+Which CSS property is used to change the text color of an element?
+
+"A. font-style",
+"B. text-color",
+"C. color ✅",
+"D. text-style",
+
+How do you make a list with bullets in HTML?
+
+"A. <ul> ",✅
+"B. <ol>",
+"C. <li>",
+"D. <list>"
+
+// prsyary 3-5 ba taga wa na xinito loye lay da dain !!!
